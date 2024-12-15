@@ -3,12 +3,15 @@
 For this project, I created a habitat suitability model for Sorghastrum nutans. S. nutans, known commonly as Indiangrass is native to North America, and is distributed from the east coast to Arizona, Utah, and the Rocky Mountains. 
 It’s range has been moving northward over the last 50 years. 
 
-Insert picture of grass and united states distribution
-
 ### Site Description
 I choose two grasslands from the USFS National Grasslands to compare. To further investigate if S. nutans is moving northwards, I choose one National Grassland in the Northern United States and one in the Southern United States. 
 The Northern grassland I picked was the Sheyenne National Grassland, located in North Dakota. Sheyenne National Grassland is 70,446 acres and located at 46 degrees North. The Southern Grassland that I picked was Lyndon B. Johnson 
 National Grassland, located in Texas. Lyndon B. Johnson National Grassland is 20,309 acres and located at 33 degrees South.
+
+<img 
+  src="img/USA_National_Forests_Map.jpg" 
+  alt="USA National Forests Map" 
+  width="50%">
 
 ### Data Sources
 To determine habitat suitability I used data on soil pH, elevation (to calculate slope), and historical precipitation.
