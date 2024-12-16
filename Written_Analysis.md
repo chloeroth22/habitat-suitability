@@ -26,8 +26,12 @@ Chaney, N. W., Wood, E. F., McBratney, A. B., Hempel, J. W., Nauman, T. W., Brun
 ### Elevation
 Elevation data is from NASA Shuttle Radar Topography Mission (SRTM) provied by the Land Processes Distributed Active Archive Center (LP DAAC). SRTM is a collaboration between NASA, the National Geospatial-Intelligence Agency (NGA), and German and Italian space agencies. It is a near-global digital elevation model (DEM) using radar inferometry. Data was collected on the Space Shuttle Endeavour during its STS-99 mission from 02/11/2000 to 02/22/2000. This is version 3 of SRTM data and has a resolution of 1 arcsec. 
 
-Insert plot of elevation 
-
+<img 
+  src="img/elevation_lyndon.png" 
+  alt="Lyndon B. Johnson Elevation" 
+  width="50%" 
+  style="display:block; margin-left:auto; margin-right:auto;">
+  
 #### Citation:
 NASA JPL (2013). <i>NASA Shuttle Radar Topography Mission Global 1 arc second</i> [Data set]. NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed 2024-12-15 from https://doi.org/10.5067/MEaSUREs/SRTM/SRTMGL1.003
 10
