@@ -10,7 +10,7 @@ The Northern grassland chosen was the Sheyenne National Grassland in North Dakot
 <img 
   src="img/USA_National_Forests_Map.jpg" 
   alt="USA National Forests Map" 
-  width="50%">
+  style="max-width:100%; height:auto; display:block; margin-left:auto; margin-right:auto;">
 
 ## Data Sources
 To determine habitat suitability, I used data on soil pH, elevation (to calculate slope), and historical precipitation.
@@ -18,7 +18,15 @@ To determine habitat suitability, I used data on soil pH, elevation (to calculat
 Soil pH is from from POLARIS, which is a complete map of soil series probabilities that has been produced for the contiguous United States. POLARIS uses geospatial enviornmental data and a machine learning algorihm (DSMART-HPC) to remap the Soil Survy Geographic (SSURGO) database. Data is available on the [POLARIS dataset website](http://hydrology.cee.duke.edu/POLARIS/)
 I used mean soil pH in water values collected from 5 to 15 cm deep from the surface, with a resolution of 1 arcsec (~30 meters) 
 
-Insert plot of soil ph
+<img 
+  src="img/soil_ph_lyndon.png" 
+  alt="Lyndon B. Johnson Soil pH" 
+  style="max-width:100%; height:auto; display:block; margin-left:auto; margin-right:auto;">
+
+<img 
+  src="img/soil_ph_sheyenne.png" 
+  alt="Sheyenne Soil pH" 
+  style="max-width:100%; height:auto; display:block; margin-left:auto; margin-right:auto;">
 
 #### Citation:
 Chaney, N. W., Wood, E. F., McBratney, A. B., Hempel, J. W., Nauman, T. W., Brungard, C. W., & Odgers, N. P. (2016). POLARIS: A 30-meter probabilistic soil series map of the contiguous United States. Geoderma, 274, 54-67. https://doi.org/10.1016/j.geoderma.2016.03.025
@@ -29,8 +37,12 @@ Elevation data is from NASA Shuttle Radar Topography Mission (SRTM) provied by t
 <img 
   src="img/elevation_lyndon.png" 
   alt="Lyndon B. Johnson Elevation" 
-  width="50%" 
-  style="display:block; margin-left:auto; margin-right:auto;">
+  style="max-width:100%; height:auto; display:block; margin-left:auto; margin-right:auto;">
+
+<img 
+  src="img/elevation_sheyenne.png" 
+  alt="Sheyenne Elevation" 
+  style="max-width:100%; height:auto; display:block; margin-left:auto; margin-right:auto;">
   
 #### Citation:
 NASA JPL (2013). <i>NASA Shuttle Radar Topography Mission Global 1 arc second</i> [Data set]. NASA EOSDIS Land Processes Distributed Active Archive Center. Accessed 2024-12-15 from https://doi.org/10.5067/MEaSUREs/SRTM/SRTMGL1.003
@@ -39,7 +51,25 @@ NASA JPL (2013). <i>NASA Shuttle Radar Topography Mission Global 1 arc second</i
 #### Precipitation 
 Precipritation data is from Bejing Normal University's (BNU-ESM) "Monthly aggregation of downscaled daily meteorological data of Monthly Precipitation Amount" using the run r1i1p1 of the historical scenario. This dataset contains monthly downscaled meteorological and hydrological projections, including precipritation, temperature, and humidity, for the Conterminous United States at 1/24-deg resolution. These monthly values are obtained by aggregating the daily values obtained from the downscaling using the Multivariate Adaptive Constructed Analogs (MACA, Abatzoglou, 2012) statistical downscaling method with the METDATA (Abatzoglou,2013) training dataset.
 
-Insert plot of precipitation 
+<img 
+  src="img/precip_1950_lyndon.png" 
+  alt="Lyndon B. Johnson 1950 Precipitation" 
+  style="max-width:100%; height:auto; display:block; margin-left:auto; margin-right:auto;">
+
+<img 
+  src="img/precip_2000_lyndon.png" 
+  alt="Lyndon B. Johnson 2000 Precipitation" 
+  style="max-width:100%; height:auto; display:block; margin-left:auto; margin-right:auto;">
+  
+<img 
+  src="img/precip_1950_sheyenne.png" 
+  alt="Sheyenne 1950 Precipitation" 
+  style="max-width:100%; height:auto; display:block; margin-left:auto; margin-right:auto;">
+
+<img 
+  src="img/precip_2000_sheyenne.png" 
+  alt="Sheyenne 2000 Precipitation" 
+  style="max-width:100%; height:auto; display:block; margin-left:auto; margin-right:auto;">
 
 #### Citation:
 Abatzoglou, J. T., & Hegewisch, K. C. (2014). Monthly aggregation of downscaled daily meteorological data of Monthly Precipitation Amount from College of Global Change and Earth System Science, Beijing Normal University (BNU-ESM) using the run r1i1p1 of the historical scenario. Version 2.3, Dec 2013. REACCH. https://maca.northwestknowledge.net
