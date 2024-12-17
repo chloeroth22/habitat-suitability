@@ -10,7 +10,7 @@ The USFS National Grassland Units was downloaded and study sites were selected. 
 The optimal values are for each variable were determined in order to train a fuzzy logic habitat suitability model. For each digital number in each raster, 1 was assigned if the grid suqare value was optimal, 0 was assigned if the grid square was incompatible, and values that were not perfectly optimal were linerally scaled from 0 to 1. Then the layers were multiplied together to combine them.
 
 ## Installation
-Use the [enviornment earth-analytics-python.yml](earth-analytics-habitat.py)
+Use the enviornment [earth-analytics-python.yml](earth-analytics-habitat.py)
 
 The code is found [here](earth-analytics-habitat.py)
 
