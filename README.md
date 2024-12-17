@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/903891825.svg)](https://doi.org/10.5281/zenodo.14504665)
+
 # Habitat Suitability 
 ## Project Description  
 In this project, the final project for the Earth Analytics Professional Certificate at CU Boulder, I developed a habitat suitability model for Sorghastrum nutans (commonly known as Indiangrass). This project aims to investigate whether changes in key environmental variables—soil pH, slope, and precipitation—are making conditions less suitable for S. nutans in the South, while making them more favorable in the North, potentially driving the species' northward range expansion. To explore this potential range shift, I compared two grasslands from the USFS National Grasslands. I selected one grassland from the Northern United States and one from the Southern United States to examine possible regional differences. The Northern grassland chosen was the Sheyenne National Grassland in North Dakota. and Southern grassland selected was the Lyndon B. Johnson National Grassland in Texas. 
