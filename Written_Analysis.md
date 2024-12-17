@@ -15,7 +15,7 @@ The Northern grassland chosen was the Sheyenne National Grassland in North Dakot
 ## Data Sources
 To determine habitat suitability, I used data on soil pH, elevation (to calculate slope), and historical precipitation.
 ### Soil pH
-Soil pH is from from POLARIS, which is a complete map of soil series probabilities that has been produced for the contiguous United States. POLARIS uses geospatial enviornmental data and a machine learning algorihm (DSMART-HPC) to remap the Soil Survy Geographic (SSURGO) database. Data is available on the [POLARIS dataset website](http://hydrology.cee.duke.edu/POLARIS/)
+Soil pH is from from POLARIS, which is a complete map of soil series probabilities that has been produced for the contiguous United States. POLARIS uses geospatial environmental data and a machine learning algorithm (DSMART-HPC) to remap the Soil Survey Geographic (SSURGO) database. Data is available on the [POLARIS dataset website](http://hydrology.cee.duke.edu/POLARIS/)
 I used mean soil pH in water values collected from 5 to 15 cm deep from the surface, with a resolution of 1 arcsec (~30 meters) 
 
 <img 
@@ -32,7 +32,7 @@ I used mean soil pH in water values collected from 5 to 15 cm deep from the surf
 Chaney, N. W., Wood, E. F., McBratney, A. B., Hempel, J. W., Nauman, T. W., Brungard, C. W., & Odgers, N. P. (2016). POLARIS: A 30-meter probabilistic soil series map of the contiguous United States. Geoderma, 274, 54-67. https://doi.org/10.1016/j.geoderma.2016.03.025
 
 ### Elevation
-Elevation data is from NASA Shuttle Radar Topography Mission (SRTM) provied by the Land Processes Distributed Active Archive Center (LP DAAC). SRTM is a collaboration between NASA, the National Geospatial-Intelligence Agency (NGA), and German and Italian space agencies. It is a near-global digital elevation model (DEM) using radar inferometry. Data was collected on the Space Shuttle Endeavour during its STS-99 mission from 02/11/2000 to 02/22/2000. This is version 3 of SRTM data and has a resolution of 1 arcsec. 
+Elevation data is from NASA Shuttle Radar Topography Mission (SRTM) provided by the Land Processes Distributed Active Archive Center (LP DAAC). SRTM is a collaboration between NASA, the National Geospatial-Intelligence Agency (NGA), and German and Italian space agencies. It is a near-global digital elevation model (DEM) using radar inferometry. Data was collected on the Space Shuttle Endeavour during its STS-99 mission from 02/11/2000 to 02/22/2000. This is version 3 of SRTM data and has a resolution of 1 arcsec. 
 
 <img 
   src="img/elevation_lyndon.png" 
@@ -49,7 +49,7 @@ NASA JPL (2013). <i>NASA Shuttle Radar Topography Mission Global 1 arc second</i
 10
 
 #### Precipitation 
-Precipritation data is from Bejing Normal University's (BNU-ESM) "Monthly aggregation of downscaled daily meteorological data of Monthly Precipitation Amount" using the run r1i1p1 of the historical scenario. This dataset contains monthly downscaled meteorological and hydrological projections, including precipritation, temperature, and humidity, for the Conterminous United States at 1/24-deg resolution. These monthly values are obtained by aggregating the daily values obtained from the downscaling using the Multivariate Adaptive Constructed Analogs (MACA, Abatzoglou, 2012) statistical downscaling method with the METDATA (Abatzoglou,2013) training dataset.
+Precipitation data is from Bejing Normal University's (BNU-ESM) "Monthly aggregation of downscaled daily meteorological data of Monthly Precipitation Amount" using the run r1i1p1 of the historical scenario. This dataset contains monthly downscaled meteorological and hydrological projections, including precipitation, temperature, and humidity, for the Conterminous United States at 1/24-deg resolution. These monthly values are obtained by aggregating the daily values obtained from the downscaling using the Multivariate Adaptive Constructed Analogs (MACA, Abatzoglou, 2012) statistical downscaling method with the METDATA (Abatzoglou,2013) training dataset.
 
 <img 
   src="img/precip_1950_lyndon.png" 
@@ -76,10 +76,10 @@ Abatzoglou, J. T., & Hegewisch, K. C. (2014). Monthly aggregation of downscaled 
 (Original dataset available at: http://www.reacchpna.org/)
 
 ### Model
-For my moddel I chose to train a fuzzy logic habitat suitability model. For S. nutans I researched what the optimal values are for each variable (soil pH, slope, and historic annual precipitation). S. nutans can survive with soil pH values between 4.8 and 8 (USDA NRCS 2017) and does best in pH ranges between 5 and 6 (Gardenia.net). I determined that S. nutans does better on shallow slopes and selected the optimal range to be 0 to 30 degrees. Finally, S. nutans exists in areas with annual preciptations of 11 inches to 45 inches (USDA NRCS 2017), but does best with rainfalls of between 20 and 30 inches annually (Gardenia.net).
+For my model I chose to train a fuzzy logic habitat suitability model. For S. nutans I researched what the optimal values are for each variable (soil pH, slope, and historic annual precipitation). S. nutans can survive with soil pH values between 4.8 and 8 (USDA NRCS 2017) and does best in pH ranges between 5 and 6 (Gardenia.net). I determined that S. nutans does better on shallow slopes and selected the optimal range to be 0 to 30 degrees. Finally, S. nutans exists in areas with annual precipitations of 11 inches to 45 inches (USDA NRCS 2017), but does best with rainfalls of between 20 and 30 inches annually (Gardenia.net).
 
 For each digital number in each raster, a value from 0 to 1 was assigned for how close that grid square is to the optimum range (1=optimal, 0=incompatible). Each variable was assigned a max and min "dealbreaker"
-where the grid square was determined to be fully incompatable and set to 0. If the pH was below 4.8 or above 8, the slope was above 90, or the precipitation was below 11 inches or above 45 inches annually the compatibility was mapped to 0. Additionally, each variable was assigned a max and min "optimal" value where the grid square was determined to be optimal and set to 1. Values between "min dealbreaker" and "min optimal" were linearly scaled from 0 to 1. Values between 'max optimal" and "max dealbreak" were linearly scaled from 1 to 0. Then the layers multiplying them together which gave a single suitability number for each square.
+where the grid square was determined to be fully incompatible and set to 0. If the pH was below 4.8 or above 8, the slope was above 90, or the precipitation was below 11 inches or above 45 inches annually the compatibility was mapped to 0. Additionally, each variable was assigned a max and min "optimal" value where the grid square was determined to be optimal and set to 1. Values between "min dealbreaker" and "min optimal" were linearly scaled from 0 to 1. Values between 'max optimal" and "max dealbreak" were linearly scaled from 1 to 0. Then the layers multiplying them together which gave a single suitability number for each square.
 
 #### Citations:
 Gardenia.net. (n.d.). Sorghastrum nutans. https://www.gardenia.net/plant/sorghastrum-nutans
