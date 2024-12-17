@@ -7,6 +7,6 @@ Soil pH is from from POLARIS, elevation data is from NASA Shuttle Radar Topograp
 ## 
 
 ## Installation
-Use the [enviornment earth-analytics-python.yml](link)
+Use the [enviornment earth-analytics-python.yml](earth-analytics-habitat.py)
 
 
