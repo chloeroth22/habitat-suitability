@@ -10,5 +10,6 @@ The USFS National Grassland Units was downloaded and and your study sites were s
 
 ## Installation
 Use the [enviornment earth-analytics-python.yml](earth-analytics-habitat.py)
+
 It is necessary to have an [earthdata login](https://urs.earthdata.nasa.gov/) to access the earthacess API
 
