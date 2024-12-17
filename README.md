@@ -11,7 +11,8 @@ The optimal values are for each variable were determined in order to train a fuz
 
 ## Installation
 Use the [enviornment earth-analytics-python.yml](earth-analytics-habitat.py)
-The code is found in the 
+
+The code is found [here](earth-analytics-habitat.py)
 
 It is necessary to have an [earthdata login](https://urs.earthdata.nasa.gov/) to access the earthacess API
 
