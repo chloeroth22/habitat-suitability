@@ -71,6 +71,29 @@ For my model I chose to train a fuzzy logic habitat suitability model. For S. nu
 For each digital number in each raster, a value from 0 to 1 was assigned for how close that grid square is to the optimum range (1=optimal, 0=incompatible). Each variable was assigned a max and min "dealbreaker"
 where the grid square was determined to be fully incompatible and set to 0. If the pH was below 4.8 or above 8, the slope was above 90, or the precipitation was below 11 inches or above 45 inches annually the compatibility was mapped to 0. Additionally, each variable was assigned a max and min "optimal" value where the grid square was determined to be optimal and set to 1. Values between "min dealbreaker" and "min optimal" were linearly scaled from 0 to 1. Values between 'max optimal" and "max dealbreak" were linearly scaled from 1 to 0. Then the layers multiplying them together which gave a single suitability number for each square.
 
+<img 
+  src="img/lyndon_sus_1950.png" 
+  alt="Lyndon B. Johnson 1950 Habitat Suitability" 
+  style="max-width:100%; height:auto; display:block; margin-left:auto; margin-right:auto;">
+
+<img 
+  src="img/lyndon_sus_2000.png" 
+  alt="Lyndon B. Johnson 2000 Habitat Suitability" 
+  style="max-width:100%; height:auto; display:block; margin-left:auto; margin-right:auto;">
+  
+<img 
+  src="img/sheyenne_sus_1950.png" 
+  alt="Sheyenne 1950 Habitat Suitability" 
+  style="max-width:100%; height:auto; display:block; margin-left:auto; margin-right:auto;">
+
+<img 
+  src="img/sheyenne_sus_2000.png" 
+  alt="Sheyenne 2000 Habitat Suitability" 
+  style="max-width:100%; height:auto; display:block; margin-left:auto; margin-right:auto;">
+
+### Conclusions and Future Updates
+It was interesting to optimize these varibles and map them out, but ultimately I think that more variables, and better information about the optimal environmental variables, would allow for a deeper, more conclusive analysis. The way that the models ended up mapping out showed that the south actually became more suitable for S. nutans, which goes against the projects initial belief. Additionally, I had some issues with the masking the precipitation, resulting in sections of the AOI not being included. There were also a few spots that are missing elevation data. In the future, I would like to refine the optimal ranges, add variables, and fix the data gaps. 
+
 #### Citations:
 Abatzoglou, J. T., & Hegewisch, K. C. (2014). Monthly aggregation of downscaled daily meteorological data of Monthly Precipitation Amount from College of Global Change and Earth System Science, Beijing Normal University (BNU-ESM) using the run r1i1p1 of the historical scenario. Version 2.3, Dec 2013. REACCH. https://maca.northwestknowledge.net
 (Original dataset available at: http://www.reacchpna.org/)
