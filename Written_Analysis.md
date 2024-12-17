@@ -76,11 +76,13 @@ Abatzoglou, J. T., & Hegewisch, K. C. (2014). Monthly aggregation of downscaled 
 (Original dataset available at: http://www.reacchpna.org/)
 
 ### Model
-To train a fuzzy logic habitat suitability model:
+For my moddel I chose to train a fuzzy logic habitat suitability model. For S. nutans I researched what the optimal values are for each variable (soil pH, slope, and historic annual precipitation). S. nutans can survive with soil pH values between 4.8 and 8 (USDA NRCS 2017) and does best in pH ranges between 5 and 6 (Gardenia.net). I determined that S. nutans does better on shallow slopes and selected the optimal range to be 0 to 30 degrees. Finally, S. nutans exists in areas with annual preciptations of 11 inches to 45 inches (USDA NRCS 2017), but does best with rainfalls of between 20 and 30 inches annually (Gardenia.net).
 
-Research S. nutans, and find out what optimal values are for each variable you are using (e.g. soil pH, slope, and current climatological annual precipitation).
-For each digital number in each raster, assign a value from 0 to 1 for how close that grid square is to the optimum range (1=optimal, 0=incompatible).
-Combine your layers by multiplying them together. This will give you a single suitability number for each square.
-Optionally, you may apply a threshold to make the most suitable areas pop on your map.
+For each digital number in each raster, a value from 0 to 1 was assigned for how close that grid square is to the optimum range (1=optimal, 0=incompatible). Each variable was assigned a max and min "dealbreaker"
+where the grid square was determined to be fully incompatable and set to 0. If the pH was below 4.8 or above 8, the slope was above 90, or the precipitation was below 11 inches or above 45 inches annually the compatibility was mapped to 0. Additionally, each variable was assigned a max and min "optimal" value where the grid square was determined to be optimal and set to 1. Values between "min dealbreaker" and "min optimal" were linearly scaled from 0 to 1. Values between 'max optimal" and "max dealbreak" were linearly scaled from 1 to 0. Then the layers multiplying them together which gave a single suitability number for each square.
 
-https://www.nrcs.usda.gov/plantmaterials/etpmcpg13196.pdf
+#### Citations:
+Gardenia.net. (n.d.). Sorghastrum nutans. https://www.gardenia.net/plant/sorghastrum-nutans
+U.S. Department of Agriculture, Natural Resources Conservation Service. (2017). The PLANTS database [Data set]. National Plant Data Team. http://plants.usda.gov
+
+
