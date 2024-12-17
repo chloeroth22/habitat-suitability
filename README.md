@@ -4,6 +4,8 @@ In this project, the final project for the Earth Analytics Professional Certific
 
 Soil pH is from from POLARIS, elevation data is from NASA Shuttle Radar Topography Mission (SRTM), and precipitation data is from Bejing Normal University's (BNU-ESM) "Monthly aggregation of downscaled daily meteorological data of Monthly Precipitation Amount". I chose to train a fuzzy logic habitat suitability model. For S. nutans I researched what the optimal values are for each variable (soil pH, slope, and historic annual precipitation) and for each digital number in each raster, a value from 0 to 1 was assigned for how close that grid square is to the optimum range (1=optimal, 0=incompatible).
 
+A more indepth analysis of the resutls can be found [here](Written_Analysis.md)
+
 ## Code Summary
 The USFS National Grassland Units was downloaded and study sites were selected. For each grassland model variables were downloaded as raster layers. Soil pH .tif files were downloaded by parsing the dataset website HTML for appropriate latitudes and longidues. Elevation .hgt SRTM files were downloaded by using the APPEEARS API. Climate data was downloaded from the MACAv2 dataset. Slope was derived from the elevation data. All raster data was clipped, merged, reprojected, and harmonized. 
 
