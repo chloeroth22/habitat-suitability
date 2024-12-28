@@ -9,7 +9,7 @@ Soil pH is from from POLARIS, elevation data is from NASA Shuttle Radar Topograp
 A more in depth analysis of the results can be found [here](Written_Analysis.md)
 
 ## Code Summary
-The USFS National Grassland Units was downloaded and study sites were selected. For each grassland model variables were downloaded as raster layers. Soil pH .tif files were downloaded by parsing the dataset website HTML for appropriate latitudes and longitudes. Elevation .hgt SRTM files were downloaded by using the APPEEARS API. Climate data was downloaded from the MACAv2 dataset. Slope was derived from the elevation data. All raster data was clipped, merged, reprojected, and harmonized. 
+The USFS National Grassland Units were downloaded and study sites were selected. For each grassland model variables were downloaded as raster layers. Soil pH .tif files were downloaded by parsing the dataset website HTML for appropriate latitudes and longitudes. Elevation .hgt SRTM files were downloaded by using the APPEEARS API. Climate data was downloaded from the MACAv2 dataset. Slope was derived from the elevation data. All raster data was clipped, merged, reprojected, and harmonized. 
 
 The optimal values are for each variable were determined in order to train a fuzzy logic habitat suitability model. For each digital number in each raster, 1 was assigned if the grid square value was optimal, 0 was assigned if the grid square was incompatible, and values that were not perfectly optimal were linearly scaled from 0 to 1. Then the layers were multiplied together to combine them.
 
